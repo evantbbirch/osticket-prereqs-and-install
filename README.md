@@ -1,4 +1,3 @@
-<h1>prereqs and install</h1>
 <p align="center">
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>

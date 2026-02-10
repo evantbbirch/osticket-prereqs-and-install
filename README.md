@@ -18,8 +18,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>List of Prerequisites</h2>
 
 - Microsoft Azure Subscription
-- WindowsVM as Host
-- WindowsVM as Client
+- WindowsVM as Host Device
 - osTicket
 - MySQL
 - PHP
@@ -147,11 +146,59 @@ Once it is downloaded, unzip the folder. For ease of the process, onto the deskt
 </p>
 <h2>osTicket Installation</h2>
 <p>
-  Take the <b>"osTicket-v1.15.8.zip"</b> file and extract the files, it can stay in the installation files folder. 
-  <p>In the unzipped folder:</p>
   <ol>
-    <li>Copy the <b>"upload"</b> folder and place it in <b>"C:\inetpub\wwwroot"</b></li>
-    <li>In <b>"C:\inetpub\wwwroot"</b>, rename <b>"upload"</b> to <b>"osTicket".</b></li>
+    <li>Take the <b>"osTicket-v1.15.8.zip"</b> file and extract the files, it can stay in the installation files folder. 
+      <p>In the unzipped folder:</p>
+      <ol>
+        <li>Copy the <b>"upload"</b> folder and place it in <b>"C:\inetpub\wwwroot"</b></li>
+        <li>In <b>"C:\inetpub\wwwroot"</b>, rename <b>"upload"</b> to <b>"osTicket".</b><p><img width="2140" height="766" alt="image" src="https://github.com/user-attachments/assets/a66a09ea-2361-4baa-878b-06bd581037ee" /></p></li>
+        <li>Stop and Start the IIS Server again.</li>
+      </ol>
+    </li>
+    <li>While still in IIS go to the osTicket site by following the dropdowns and clicking <b>"Browse *:80(http)</b> on the right-hand side.<p><img width="835" height="403" alt="image" src="https://github.com/user-attachments/assets/1cd658ce-9ef8-427b-8ded-72e7f30bdb6a" /></p>
+    <p>You should see this landing page:<img width="1880" height="1542" alt="image" src="https://github.com/user-attachments/assets/4ab56329-f632-4910-96d6-99558ffec0ae" /></p></li>
+    <li>
+      Some extension you see are not enabled. We will enable a few more. Back in IIS, go to the PHP Manager while on the <b>"osTicket"</b> folder.
+      <ul>
+        <li>In the PHP Extensions section, click <b>Enable or disable an extention"</b>.<p><img width="836" height="495" alt="image" src="https://github.com/user-attachments/assets/5200ff47-e62a-4d3c-84ea-ef7ae21c0349" /></p></li>
+        <li><p>Enable these extensions by selecting, then clicking <b>"Enable"</b> on the right-hand side on IIS. <img width="833" height="608" alt="image" src="https://github.com/user-attachments/assets/77de6abb-a19e-4248-9e56-97053ad64327" /></p>
+          <ul>
+            <li>php_imap.dll</li>
+            <li>php_intl.dll</li>
+            <li>php_opcache.dll</li>
+          </ul>
+        </li>
+        <li>When you refresh the brower, it should look like this now:<p><img width="1880" height="1547" alt="image" src="https://github.com/user-attachments/assets/548d9e3f-b935-4beb-ad55-47028b4a748a" /></p></li>
+      </ul>
+    </li>
+    <li> Now, we need to rename the <b>"ost-sampleconfig.php</b> file. We're simply omitting the "sample" for cleanup.</li>
+    <ul>
+      <li>From: C:\inetpub.wwwroot\osTicket\include\ost-sampleconfig.php</li>
+      <li>To: C:\inetpub\wwwroot\osTicket\include\ost-config.php<p><img width="1056" height="768" alt="image" src="https://github.com/user-attachments/assets/ebd70dc2-3fd9-465d-be42-7125c1455ced" /></p></li>
+    </ul>
+    <li> Assign Permissions to that config file. Please assign your permissions as they are necessary for your environment. For purposes of setup, this will be set to everyone with full access.</li>
+    <ol>
+      <li>Right click > Properties > Security > Advanced<p><img width="1142" height="794" alt="image" src="https://github.com/user-attachments/assets/d8a6dc8c-356e-4d78-bb6d-551062a776ba" /></p></li>
+      <li>Disable Inheritance > Remove All</li>
+      <li>Once Emptied, hit Add > Select a principal > Everyone</li>
+      <p>It sholuld look something like this:<p><img width="574" height="397" alt="image" src="https://github.com/user-attachments/assets/4ffb96a8-1bb3-4112-ae65-fca4dd761a0c" /></p></p>
+    </ol>
+    <li>We can finally hit that <b>"Continue >>"</b> button on the installer in the web browser!<p><img width="1875" height="1548" alt="image" src="https://github.com/user-attachments/assets/6b138c0f-a257-45a2-8c88-2c48e5e870c1" /></p></li>
+    <li>Input all the necessary criteria for your environment for the System Settings and Admin User sections.<p><img width="1876" height="2023" alt="image" src="https://github.com/user-attachments/assets/f5845959-5950-4293-a656-dffdb5436434" /></p></li>
+    <li>We need to connect to the database. So we have 1 more setup executable in our installation folder. Run <b>"HeidiSQL_12.3.0.6589_Setup"</b>. Leave everything default.<p><img width="528" height="385" alt="image" src="https://github.com/user-attachments/assets/5d5ec839-da5f-488f-94ec-0101e3f4e04d" /></p></li>
+    <li>Once the application is running, hit <b>"New"</b>. Input the password you made for the SQL server, and hit <b>"Open</b><p><img width="1026" height="719" alt="image" src="https://github.com/user-attachments/assets/b73dd794-5217-4a26-bfca-a4bea2f62d7e" /></p></li>
+    <li>Create a database, as shown named <b>"osTicket"</b>.<p><img width="1401" height="891" alt="image" src="https://github.com/user-attachments/assets/fd73d252-b598-4a5d-bcae-2491cef3bfc5" />
+</p></li>
+    <li>Our brower application is now connected to our SQL server! Input the name of the database as you input it, as well as the database username and password and click <b>"Install Now"</b>.</li>
+    <li>Voila!<p><img width="1877" height="1266" alt="image" src="https://github.com/user-attachments/assets/d41f221e-cb51-446a-ae64-4da0554eddf5" /></p></li>
+    <li>
+      One last small step is cleaning up to reduce clutter on the VM.
+      <ul>
+        <li>Delete <b>"C:\inetpub\wwwroot\osTicket\setup"</b></li>
+        <li>Set Permissions to "Read Only": <b>"C:\inetpub\wwwroot\osTicket\include\ost-config.php"</b>
+      </ul>
+    </li>
+    <li>You can now move on to Post-Install Setup by clicking the Admin Panel link on the right side!</li>
   </ol>
 </p>
 <!--

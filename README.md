@@ -77,11 +77,20 @@ Any options that were not mentioned on this page are not needed for our implemen
   <img width="387" height="801" alt="image" src="https://github.com/user-attachments/assets/82642718-f144-4822-94ed-8a1e2ea37aa2" />
 </p> <br />
 <p>
-  Select <b>"Next : Disks >"</b> then <b>"Next : Networking >"</b>.
+  Select <b>"Next : Disks >"</b> then <b>"Next : Networking >"</b>. You will see the Virtual Network section autofill along with the subnet and Public IP. These options are okay. You can proceed to <b>"Review + create"</b> and then <b>"Create"</b>. The deployment may take a few minutes.
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="569" height="841" alt="image" src="https://github.com/user-attachments/assets/f9be0095-abd8-48ee-ae31-4cf4f1a8dccd" />
 </p>
+<p>
+  The VM is created! Now, with the fresh VM, we can install osTicket and it's dependencies. On Azure, head to the VM page and look for the VM's Public IP Address in order to remote connect to the VM.
+</p>
+<p>  </p>
+<p>When in the Start Menu on your windows device, type in "remote desktop connection" and you will see this window.</p>
+<p> image </p>
+<p>Input the credentials</p>
+
+
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>

@@ -85,10 +85,10 @@ Any options that were not mentioned on this page are not needed for our implemen
 <p>
   The VM is created! Now, with the fresh VM, we can install osTicket and it's dependencies. On Azure, head to the VM page and look for the VM's Public IP Address in order to remote connect to the VM.
 </p>
-<p>  </p>
-<p>When in the Start Menu on your windows device, type in "remote desktop connection" and you will see this window.</p>
-<p> image </p>
-<p>Input the credentials</p>
+<p><img width="1673" height="65" alt="image" src="https://github.com/user-attachments/assets/a666d2f1-7e1d-4956-a583-750de0c41fbb" /></p>
+<p>When in the Start Menu on your windows device, type in "remote desktop connection" and select the application. A window will pop up that looks like this.</p>
+<p><img width="606" height="370" alt="image" src="https://github.com/user-attachments/assets/45cb4224-9276-4b87-9684-e505ae0c3db1" /></p>
+<p>Input the Public IP Address of your VM. When it asks for credentials, do <b>not</b> input yours, but select "Use a different account" and input the credentials for the administrator your created. You may get another popup but just hit yes to proceed to connect.</p>
 
 
 <p>

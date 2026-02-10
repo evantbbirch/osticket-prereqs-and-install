@@ -192,13 +192,13 @@ Once it is downloaded, unzip the folder. For ease of the process, onto the deskt
     <li>Our brower application is now connected to our SQL server! Input the name of the database as you input it, as well as the database username and password and click <b>"Install Now"</b>.</li>
     <li>Voila!<p><img width="1877" height="1266" alt="image" src="https://github.com/user-attachments/assets/d41f221e-cb51-446a-ae64-4da0554eddf5" /></p></li>
     <li>
-      One last small step is cleaning up to reduce clutter on the VM.
+      One last small step is cleaning up to reduce clutter on the VM. Warning, if you mess up and uninstall the osTicket folder, you will have to start over again. Please be careful.
       <ul>
         <li>Delete <b>"C:\inetpub\wwwroot\osTicket\setup"</b></li>
         <li>Set Permissions to "Read Only": <b>"C:\inetpub\wwwroot\osTicket\include\ost-config.php"</b>
       </ul>
     </li>
-    <li>You can now move on to Post-Install Setup by clicking the Admin Panel link on the right side!</li>
+    <li>Remeber to bookmark your page. You can now move on to Post-Install Setup by clicking the Admin Panel link on the right side!</li>
   </ol>
 </p>
 <!--

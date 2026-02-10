@@ -87,7 +87,7 @@ Any options that were not mentioned on this page are not needed for our implemen
 <p><img width="1673" height="65" alt="image" src="https://github.com/user-attachments/assets/a666d2f1-7e1d-4956-a583-750de0c41fbb" /></p>
 <p>When in the Start Menu on your windows device, type in "remote desktop connection" and select the application. A window will pop up that looks like this.</p>
 <p><img width="606" height="370" alt="image" src="https://github.com/user-attachments/assets/45cb4224-9276-4b87-9684-e505ae0c3db1" /></p>
-<p>Input the Public IP Address of your VM. When it asks for credentials, do <b>not</b> input yours, but select "Use a different account" and input the credentials for the administrator your created. You may get another popup but just hit yes to proceed to connect.</p>
+<p>Input the Public IP Address of your VM. When it asks for credentials, do <b>not</b> input yours, but select "Use a different account" and input the credentials for the administrator your created on the VM. You may get another popup but just hit yes to proceed to connect.</p>
 <h2> Click <a href="https://docs.google.com/document/d/158ESzkK_yZH2rl4_A5fkpZAnSlkvx0g_Fbq7OGWtn5o/edit?usp=sharing">here</a> for the a link to the zip files. </h2>
 You can take this link, copy and paste it into the Microsoft Edge browser on the VM, and have it download onto the system that way.
 <p><img width="940" height="775" alt="image" src="https://github.com/user-attachments/assets/4ee4c474-ee2b-4dc8-bc6c-27b38ad02a5f" /></p>

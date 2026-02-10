@@ -89,11 +89,24 @@ Any options that were not mentioned on this page are not needed for our implemen
 <p>When in the Start Menu on your windows device, type in "remote desktop connection" and select the application. A window will pop up that looks like this.</p>
 <p><img width="606" height="370" alt="image" src="https://github.com/user-attachments/assets/45cb4224-9276-4b87-9684-e505ae0c3db1" /></p>
 <p>Input the Public IP Address of your VM. When it asks for credentials, do <b>not</b> input yours, but select "Use a different account" and input the credentials for the administrator your created. You may get another popup but just hit yes to proceed to connect.</p>
-
+<h2> Click <a href="https://docs.google.com/document/d/158ESzkK_yZH2rl4_A5fkpZAnSlkvx0g_Fbq7OGWtn5o/edit?usp=sharing">here</a> for the a link to the zip files. </h2>
+You can take this link, copy and paste it into the Microsoft Edge browser on the VM, and have it download onto the system that way.
+<p><img width="940" height="775" alt="image" src="https://github.com/user-attachments/assets/4ee4c474-ee2b-4dc8-bc6c-27b38ad02a5f" /></p>
+<p>
+Once it is downloaded, unzip the folder. For ease of the process, onto the desktop is fine.
+</p>
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Before we move further with installation, we need a critical Windows feature enabled.
+  <ol>
+  <li>Go to Start</li>
+  <li>In the Search bar, search <b>"wndows features"</b></li>
+  <li>Select <b>"Turn Windows features on or off"</b></li>
+  </ol>
+  <img width="1248" height="1020" alt="image" src="https://github.com/user-attachments/assets/14c1c92a-4794-4bca-872b-a304555acffc" />
 </p>
+<p>Enable <b>"Internet Information Services"</b> and <b>"CGI"</b>, as highlighted here.</p>
+<p><img width="347" height="443" alt="image" src="https://github.com/user-attachments/assets/9bc46394-26dd-4565-ba67-e009d2fb5df9" /></p>
 <br />
 
 Part 1 of 3 complete!

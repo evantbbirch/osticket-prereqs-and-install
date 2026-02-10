@@ -95,7 +95,7 @@ You can take this link, copy and paste it into the Microsoft Edge browser on the
 <p>
 Once it is downloaded, unzip the folder. For ease of the process, onto the desktop is fine.
 </p>
-
+<h2>CriticaL Windows Features</h2>
 <p>
   Before we move further with installation, we need a critical Windows feature enabled.
   <ol>
@@ -109,5 +109,52 @@ Once it is downloaded, unzip the folder. For ease of the process, onto the deskt
 <p><img width="347" height="443" alt="image" src="https://github.com/user-attachments/assets/9bc46394-26dd-4565-ba67-e009d2fb5df9" /></p>
 <br />
 
+<h2>osTicket Dependencies Installation</h2>
+<p>
+  Now that that's done, let's go ahead and continue with the osTicket installation. Let's go ahead and install these items from the folder:
+  <ol>
+    <li>Install <b>"PHPManagerForIIS_V1.5.0"</b></li>
+    <li>
+      Install <b>"rewrite_amd64_en-US"</b>
+      <img width="847" height="474" alt="image" src="https://github.com/user-attachments/assets/839818ab-d84d-4618-8f24-ab17d002df6c" />
+    </li>
+    <li>
+      <p>Next, Create a new folder in the C drive (C:\PHP)
+<img width="1693" height="949" alt="image" src="https://github.com/user-attachments/assets/a25331b7-cf47-4251-9f62-5171b0e87a02" /></p>
+<p>Extract the file <b>"php-7.3.8-nts-Win32-VC15-x86"</b> from the installation files into the new PHP folder.
+<img width="2677" height="1236" alt="image" src="https://github.com/user-attachments/assets/918dbe00-bb94-4dfa-98b3-8a2679700127" /></p>
+    </li>
+    <li>
+      Install <b>"VC_redist.x86"</b><img width="1507" height="770" alt="image" src="https://github.com/user-attachments/assets/d7c9a129-d15d-4c8e-8aca-a3a0ac3c8360" />
+    </li>
+    <li>
+      Install <b>"mysql-5.5.62-win32"</b>. This is for the database that store ticket data and user accounts. Once you reach this screen, Make sure to launch the configuration wizard.
+      <img width="767" height="594" alt="image" src="https://github.com/user-attachments/assets/0376c39d-0f18-4711-828f-27674d91602d" />
+      <ul>
+        <li>Select the <b>Standard Configuration</b> then Next.</li>
+        <li>You should see this screen below. Set the Root password to a secure password. For demo purposes, I'm setting it to "root" and then confirm your password.<p><img width="371" height="283" alt="image" src="https://github.com/user-attachments/assets/520a222c-8af1-4452-aa7f-d6a2ee1715a8" /></p></li>
+        <li>Next, Execute, and Finish.</li>
+      </ul>
+    </li>
+    <li>Now we need to register PHP from within Internet Information Services (or IIS, one of the Windows Features we enabled). Go to the Start Menu and type in "iis" and you should see this application. Run as Administrator.<p><img width="1248" height="1020" alt="image" src="https://github.com/user-attachments/assets/1ef90f2b-315b-4bdc-8f4d-fba6ce7a5fe6" />
+</p></li>
+    <ul>
+      <li>Find the PHP Manager and double click to get to it's settings.<img width="1673" height="799" alt="image" src="https://github.com/user-attachments/assets/3ea4f327-c1b5-4aa1-a77a-0108243019cd" /></li>
+      <li>Click <b>"Register new PHP version"</b> and find the executable that is in the PHP folder we created. The file name of that application should be <b>"php-cgi"</b>.<p><img width="1670" height="587" alt="image" src="https://github.com/user-attachments/assets/c4d3b5dc-e85b-4ae2-84ce-9befc8e2b5df" /></p></li>
+      <li>Stop and Start the web server by right clicking the root and selecting the appropiate options. They are also in the Actions column on the right-hand side.<p><img width="1666" height="617" alt="image" src="https://github.com/user-attachments/assets/b9a145e7-0aa9-4c31-b2e1-8047cc7828a8" /></p></li>
+    </ul>
+  </ol>
+</p>
+<h2>osTicket Installation</h2>
+<p>
+  Take the <b>"osTicket-v1.15.8.zip"</b> file and extract the files, it can stay in the installation files folder. 
+  <p>In the unzipped folder:</p>
+  <ol>
+    <li>Copy the <b>"upload"</b> folder and place it in <b>"C:\inetpub\wwwroot"</b></li>
+    <li>In <b>"C:\inetpub\wwwroot"</b>, rename <b>"upload"</b> to <b>"osTicket".</b></li>
+  </ol>
+</p>
+<!--
 Part 1 of 3 complete!
 <h2>Continue to Part 2 <a href="https://github.com/evantbbirch/osticket-postinstall-config">here</a>
+-->

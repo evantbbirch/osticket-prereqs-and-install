@@ -95,7 +95,7 @@ You can take this link, copy and paste it into the Microsoft Edge browser on the
 <p>
 Once it is downloaded, unzip the folder. For ease of the process, onto the desktop is fine.
 </p>
-<h2>CriticaL Windows Features</h2>
+<h2>Critical Windows Features</h2>
 <p>
   Before we move further with installation, we need a critical Windows feature enabled.
   <ol>
